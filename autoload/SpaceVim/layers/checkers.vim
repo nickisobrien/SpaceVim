@@ -17,14 +17,14 @@ let s:STRING = SpaceVim#api#import('data#string')
 function! SpaceVim#layers#checkers#plugins() abort
   let plugins = []
 
-  if g:spacevim_enable_neomake && g:spacevim_enable_ale == 0
-    call add(plugins, ['neomake/neomake', {'merged' : 0, 'loadconf' : 1 , 'loadconf_before' : 1}])
-  elseif g:spacevim_enable_ale
-    call add(plugins, ['w0rp/ale', {'merged' : 0, 'loadconf_before' : 1}])
-  else
-    call add(plugins, ['wsdjeg/syntastic', {'on_event': 'WinEnter', 'loadconf' : 1, 'merged' : 0}])
-  endif
-
+  " if g:spacevim_enable_neomake && g:spacevim_enable_ale == 0
+  "   call add(plugins, ['neomake/neomake', {'merged' : 0, 'loadconf' : 1 , 'loadconf_before' : 1}])
+  " elseif g:spacevim_enable_ale
+  "   call add(plugins, ['w0rp/ale', {'merged' : 0, 'loadconf_before' : 1}])
+  " else
+  "   call add(plugins, ['wsdjeg/syntastic', {'on_event': 'WinEnter', 'loadconf' : 1, 'merged' : 0}])
+  " endif
+  "
   return plugins
 endfunction
 
